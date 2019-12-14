@@ -1,0 +1,25 @@
+{
+  "name": "react-svg-main",
+  "version": "0.1.2",
+  "description": "SVG Icons Handler",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "dependencies": {
+    "react": "16.12.0",
+    "react-native-svg": "^9.13.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanoff/react-svg-main.git"
+  },
+  "keywords": [
+    "React",
+    "Icons",
+    "SVG"
+  ],
+  "author": "Dimitry Ivanov <2@ivanoff.org.ua> # curl -A cv ivanoff.org.ua",
+  "bugs": {
+    "url": "https://github.com/ivanoff/react-svg-main/issues"
+  },
+  "homepage": "https://github.com/ivanoff/react-svg-main"
+}
