@@ -18,6 +18,7 @@ export default class SvgMain extends Component {
 
     const [, group, name] = sourceName.match(/(.*?)\/(.*)/) || [, sourceGroup || defaultSet, sourceName];
 
+    // icon will be group/name or defaultGroup/name or name or question
     let icon = this.iconsSet[group] && this.iconsSet[group][name];
     if(!icon) icon = this.iconsSet[defaultSet] && this.iconsSet[defaultSet][name];
     if(!icon) icon = this.iconsSet[name];
