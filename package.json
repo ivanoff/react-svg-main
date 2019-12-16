@@ -1,6 +1,6 @@
 {
   "name": "react-svg-main",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "SVG Icons Handler",
   "module": "src/index.js",
   "dependencies": {
