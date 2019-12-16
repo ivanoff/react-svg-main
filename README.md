@@ -39,14 +39,26 @@ render() {
 
 #### yarn
 
-```bash
-yarn add react-svg-main
+```
+yarn add react-svg-main react-native-svg
 ```
 
 #### npm
 
 ```bash
-npm install --save react-svg-main
+npm install --save react-svg-main react-native-svg
+```
+
+### Link react-native-svg
+
+```bash
+react-native link react-native-svg
+```
+
+### pod install ( for iOS )
+
+```
+cd ios && pod install && cd ..
 ```
 
 ## API
