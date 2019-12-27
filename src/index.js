@@ -24,8 +24,8 @@ export default class SvgMain extends Component {
     if(!icon) icon = this.iconsSet[name];
     if(typeof icon !== 'string') icon = question;
 
-    if(color) icon = icon.replace(/<path /g, `<path fill="${color}" `)
-    if(stroke) icon = icon.replace(/<path /g, `<path stroke="${stroke}" `)
+    if(color) icon = icon.replace(/<path /g, `<path fill="${color}" `).replace(/<polygon /g, `<polygon fill="${color}" `)
+    if(stroke) icon = icon.replace(/<path /g, `<path stroke="${stroke}" `).replace(/<polygon /g, `<polygon stroke="${stroke}" `)
 
     return <SvgXml xml={icon} width={width} height={height} {...rest} />
   }
