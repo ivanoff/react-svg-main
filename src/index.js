@@ -14,7 +14,7 @@ export default class SvgMain extends Component {
     const allGroups = Object.keys(this.iconsSet);
     const defaultSet = allGroups.length === 1 ? allGroups[0] : 'material-design';
 
-    const { group: sourceGroup, name: sourceName, width = 20, height = 20, color, stroke, ...rest } = this.props || {};
+    const { group: sourceGroup, name: sourceName, width = 20, height = 20, color, stroke, background, badge, ...rest } = this.props || {};
 
     const [, group, name] = sourceName.match(/(.*?)\/(.*)/) || [, sourceGroup || defaultSet, sourceName];
 
