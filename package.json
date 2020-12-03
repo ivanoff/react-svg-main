@@ -1,11 +1,13 @@
 {
   "name": "react-svg-main",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "SVG Icons Handler",
   "main": "src/index.js",
   "dependencies": {
-    "react": "16.13.1",
     "react-native-svg": "^9.13.6"
+  },
+  "devDependencies": {
+    "react": "16.13.1"
   },
   "repository": {
     "type": "git",
