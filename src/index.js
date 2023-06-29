@@ -10,13 +10,15 @@ export default class SvgMain extends Component {
 
   render() {
     if(!this.iconsSet) this.iconsSet = {};
+    if(!this.synonyms) this.synonyms = {};
 
     const allGroups = Object.keys(this.iconsSet);
     const defaultSet = allGroups.length === 1 ? allGroups[0] : 'material-design';
 
     const { group: sourceGroup, name: sourceName, width = 20, height = 20, color, stroke, background, badge, ...rest } = this.props || {};
 
-    const [, group, name] = sourceName.match(/(.*?)\/(.*)/) || [, sourceGroup || defaultSet, sourceName];
+    const [, group, nameOrigin] = sourceName.match(/(.*?)\/(.*)/) || [, sourceGroup || defaultSet, sourceName];
+    const name = (this.synonyms && this.synonyms[nameOrigin]) || nameOrigin;
 
     // icon will be group/name or defaultGroup/name or name or question
     let icon = this.iconsSet[group] && this.iconsSet[group][name];

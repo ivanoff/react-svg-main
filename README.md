@@ -10,11 +10,13 @@ Svg Icons Handler
 // icon.js
 import SvgMain from 'react-svg-main';
 const iconsSet = {home: '<Svg width="200" height="60"><Rect x="25" y="5" width="150"  height="50" fill="rgb(0,0,255)" /></Svg>'};
+const synonyms = {house: 'home'};
 
 export default class Icon extends SvgMain {
   constructor(props) {
     super(props);
     this.iconsSet = iconsSet;
+    this.synonyms = synonyms;
   }
 }
 ```
@@ -28,7 +30,7 @@ render() {
         <Fragment>
           <Icon name="heart" />
           <Icon name="home" height="40" width="40" color="red" />
-          <Icon name="home" badge="10" />
+          <Icon name="house" badge="10" />
           <Icon name="home" background="circle" />
           <Icon name="home" background={{ type: "button", color: 'green' }} />
           <Icon name="home" badge={{value: 'A', fontSize: 25, radius: 22, position:'top_left', color:'orange', backgroundColor:'blue'}}/>
