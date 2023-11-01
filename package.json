@@ -1,6 +1,6 @@
 {
   "name": "react-svg-main",
-  "version": "3.0.1",
+  "version": "4.0.1",
   "description": "SVG Icons Handler",
   "main": "src/index.js",
   "dependencies": {
@@ -18,6 +18,9 @@
     "Icons",
     "SVG"
   ],
+  "engines" : { 
+    "node" : ">=15.0.0"
+  },
   "author": "Dimitry Ivanov <2@ivanoff.org.ua> # curl -A cv ivanoff.org.ua",
   "bugs": {
     "url": "https://github.com/ivanoff/react-svg-main/issues"

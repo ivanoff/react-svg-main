@@ -15,7 +15,7 @@ export default class SvgMain extends Component {
     const allGroups = Object.keys(this.iconsSet);
     const defaultSet = allGroups.length === 1 ? allGroups[0] : 'material-design';
 
-    const { group: sourceGroup, name: sourceName, width = 20, height = 20, color, stroke, background, badge, ...rest } = this.props || {};
+    const { group: sourceGroup, name: sourceName, width = 20, height = 20, color, colors, stroke, background, badge, ...rest } = this.props || {};
 
     const [, group, nameOrigin] = sourceName.match(/(.*?)\/(.*)/) || [, sourceGroup || defaultSet, sourceName];
     const name = (this.synonyms && this.synonyms[nameOrigin]) || nameOrigin;
@@ -28,6 +28,12 @@ export default class SvgMain extends Component {
 
     if(color) icon = icon.replace(/<path /g, `<path fill="${color}" `).replace(/<polygon /g, `<polygon fill="${color}" `)
     if(stroke) icon = icon.replace(/<path /g, `<path stroke="${stroke}" `).replace(/<polygon /g, `<polygon stroke="${stroke}" `)
+
+    if(colors) {
+      for(const [colorFrom, colorTo] of Object.entries(colors)) {
+        icon = icon.replaceAll(colorFrom, colorTo);
+      }
+    }
 
     if(background) {
       const viewBox = icon.match(/viewBox="(\S+)\s+(\S+)\s+(\S+)\s+(\S+)"/);
