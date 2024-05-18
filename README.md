@@ -34,6 +34,7 @@ render() {
           <Icon name="home" background="circle" />
           <Icon name="home" background={{ type: "button", color: 'green' }} />
           <Icon name="home" badge={{value: 'A', fontSize: 25, radius: 22, position:'top_left', color:'orange', backgroundColor:'blue'}}/>
+          <Icon name="home" colors={{"#FFFFFF": "#000000"}} />
         </Fragment>
     );
 }
@@ -77,13 +78,14 @@ Returns a SvgXml icon by name and group.
 name | no |  | name of file in selected group, can contain group name before '/' sign | "home", "font-awesome/home"
 group | yes | default | name of the group | "essential"
 color | yes | | line color, css style | "#00ff00", "#0f0", "green"
+colors | yes | | replace colors | {"#FFFFFF": "#000000"} // white to black
 width | yes | 20 | width of the icon | 40
 height | yes | 20 | height of the icon | 40
-background | no | | background type | "circle"
-background | no | | background object | {type: "circle", color: 'yellow'}
-badge | no | | badge string | "10"
-badge | no | | badge object | {value: 'A', fontSize: 25, radius: 22, position:'top_left', color:'orange', backgroundColor:'blue'}
-...rest | no | | other props | style={{backgroundColor: "#00f"}}
+background | yes | | background type | "circle"
+background | yes | | background object | {type: "circle", color: 'yellow'}
+badge | yes | | badge string | "10"
+badge | yes | | badge object | {value: 'A', fontSize: 25, radius: 22, position:'top_left', color:'orange', backgroundColor:'blue'}
+...rest | yes | | other props | style={{backgroundColor: "#00f"}}
 
 
 ## Example
