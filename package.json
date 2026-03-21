@@ -15,15 +15,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivanoff/react-svg-main.git"
+    "url": "git+https://github.com/ivanoff/react-svg-main.git"
   },
   "keywords": [
     "React",
     "Icons",
     "SVG"
   ],
-  "engines" : { 
-    "node" : ">=15.0.0"
+  "engines": {
+    "node": ">=15.0.0"
   },
   "author": "Dimitry Ivanov <2@ivanoff.org.ua> # curl -A cv ivanoff.org.ua",
   "license": "MIT",
