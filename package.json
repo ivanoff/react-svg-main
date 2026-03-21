@@ -1,13 +1,17 @@
 {
   "name": "react-svg-main",
-  "version": "4.0.2",
+  "version": "4.1.1",
   "description": "SVG Icons Handler",
   "main": "src/index.js",
-  "dependencies": {
-    "react-native-svg": "^13.13.0"
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.72",
+    "react-native-svg": ">=15"
   },
   "devDependencies": {
-    "react": "18.2.0"
+    "react": "19.2.3",
+    "react-native": "0.84.1",
+    "react-native-svg": "^15.15.0"
   },
   "repository": {
     "type": "git",
